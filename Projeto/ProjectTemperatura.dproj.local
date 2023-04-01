@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>2023/03/31 20:08:19.358,=C:\Users\Sr Engel\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2023/03/31 20:11:29.119,C:\Users\Sr Engel\Documents\GitHub\TrabsonPascal\Projeto\UnTelaPrincipal.pas=C:\Users\Sr Engel\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2023/03/31 20:11:29.119,C:\Users\Sr Engel\Documents\GitHub\TrabsonPascal\Projeto\UnTelaPrincipal.dfm=C:\Users\Sr Engel\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2023/03/31 20:11:52.341,C:\Users\Sr Engel\Documents\GitHub\TrabsonPascal\Projeto\ProjectTemperatura.dproj=C:\Users\Sr Engel\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2023/03/31 20:08:19.000.358,=C:\Users\Sr Engel\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/03/31 20:11:29.000.119,C:\Users\Sr Engel\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\Sr Engel\Documents\GitHub\TrabsonPascal\Projeto\UnTelaPrincipal.dfm</Transaction>
+    <Transaction>2023/03/31 20:11:29.000.119,C:\Users\Sr Engel\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Sr Engel\Documents\GitHub\TrabsonPascal\Projeto\UnTelaPrincipal.pas</Transaction>
+    <Transaction>2023/03/31 20:11:52.000.341,C:\Users\Sr Engel\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Sr Engel\Documents\GitHub\TrabsonPascal\Projeto\ProjectTemperatura.dproj</Transaction>
   </Transactions>
 </BorlandProject>
