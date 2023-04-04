@@ -725,7 +725,7 @@ object Form1: TForm1
       140A85420BACFF1F398FD4F066CF949F0000000049454E44AE426082}
     Stretch = True
   end
-  object BtConverter: TButton
+  object Button1: TButton
     Left = 160
     Top = 368
     Width = 153
@@ -734,41 +734,10 @@ object Form1: TForm1
     Visible = False
   end
   object Entrada: TEdit
-    Left = 176
-    Top = 60
-    Width = 121
-    Height = 21
-    BorderStyle = bsNone
-    TabOrder = 1
-  end
-  object RdSelection: TRadioGroup
-    AlignWithMargins = True
     Left = 168
-    Top = 112
-    Width = 25
-    Height = 209
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    Items.Strings = (
-      ''
-      ''
-      '')
-    ParentFont = False
-    TabOrder = 2
-    StyleElements = []
-  end
-  object ComboBoxTempEntrada: TComboBox
-    Left = 336
-    Top = 60
-    Width = 65
+    Top = 64
+    Width = 129
     Height = 21
-    TabOrder = 3
-    Items.Strings = (
-      'Celsius'
-      'Fahrenheit'
-      'Kelvin')
+    TabOrder = 1
   end
 end

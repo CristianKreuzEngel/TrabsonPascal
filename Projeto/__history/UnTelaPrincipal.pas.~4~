@@ -12,8 +12,6 @@ type
     BtConverter: TButton;
     Image1: TImage;
     Entrada: TEdit;
-    RdSelection: TRadioGroup;
-    ComboBoxTempEntrada: TComboBox;
   private
     { Private declarations }
   public

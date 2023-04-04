@@ -9,11 +9,9 @@ uses
 
 type
   TForm1 = class(TForm)
-    BtConverter: TButton;
+    Button1: TButton;
     Image1: TImage;
     Entrada: TEdit;
-    RdSelection: TRadioGroup;
-    ComboBoxTempEntrada: TComboBox;
   private
     { Private declarations }
   public
