@@ -9,15 +9,6 @@ uses
 
 type
   TForm1 = class(TForm)
-    GroupBox1: TGroupBox;
-    edEntrada: TEdit;
-    Label1: TLabel;
-    cbMedida: TComboBox;
-    Label2: TLabel;
-    RadioGroup1: TRadioGroup;
-    btConverter: TButton;
-    GroupBox2: TGroupBox;
-    lbResultado: TLabel;
   private
     { Private declarations }
   public
