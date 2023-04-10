@@ -9,13 +9,15 @@ uses
 
 type
   TForm1 = class(TForm)
-    Image1: TImage;
-    btConverter: TButton;
+    GroupBox1: TGroupBox;
     edEntrada: TEdit;
+    Label1: TLabel;
+    cbMedida: TComboBox;
+    Label2: TLabel;
+    rgValorConverter: TRadioGroup;
+    btConverter: TButton;
     edResul: TEdit;
     lbTemp: TLabel;
-    cbMedida: TComboBox;
-    rgValorConverter: TRadioGroup;
     procedure btConverterClick(Sender: TObject);
   private
     { Private declarations }
