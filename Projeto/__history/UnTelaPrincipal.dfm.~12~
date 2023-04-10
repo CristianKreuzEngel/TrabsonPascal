@@ -36,12 +36,6 @@ object Form1: TForm1
       Height = 13
       Caption = 'Medida da entrada'
     end
-    object lbTemp: TLabel
-      Left = 312
-      Top = 324
-      Width = 33
-      Height = 38
-    end
     object edEntrada: TEdit
       Left = 56
       Top = 80
@@ -83,9 +77,9 @@ object Form1: TForm1
       OnClick = btConverterClick
     end
     object edResul: TEdit
-      Left = 225
-      Top = 321
-      Width = 81
+      Left = 256
+      Top = 311
+      Width = 121
       Height = 41
       Enabled = False
       TabOrder = 4

@@ -17,6 +17,7 @@ type
     rgValorConverter: TRadioGroup;
     btConverter: TButton;
     edResul: TEdit;
+    lbTemp: TLabel;
     procedure btConverterClick(Sender: TObject);
   private
     { Private declarations }
@@ -33,18 +34,73 @@ implementation
 
 procedure TForm1.btConverterClick(Sender: TObject);
 begin
-  //conversão Celsius
+  var conta: real;
+  //            <---Celsius--->
+  //Conversão Celsius para Celsius
   if((cbMedida.ItemIndex = 1) And (rgValorConverter.ItemIndex = 0))then
    begin
-        edResul.Text := edEntrada.Text
+        edResul.Text := edEntrada.Text;
+        lbTemp.Caption := 'ºC';
     end;
-  if((cbMedida.ItemIndex = 1) And (rgValorConverter.ItemIndex = 0))then
+    //Celsius para Fahrenheit
+  if((cbMedida.ItemIndex = 1) And (rgValorConverter.ItemIndex = 1))then
    begin
-        edResul.Text := edEntrada.Text
+        conta :=((StrToInt(edEntrada.Text)*(9/5))+32);
+        edResul.Text := FormatFloat('###,###,###0.000', conta);
+        lbTemp.Caption := 'ºF';
     end;
-   if((cbMedida.ItemIndex = 1) And (rgValorConverter.ItemIndex = 0))then
+    //Celsius para Kelvin
+   if((cbMedida.ItemIndex = 1) And (rgValorConverter.ItemIndex = 2))then
    begin
-        edResul.Text := edEntrada.Text
+        conta :=  ((StrToInt(edEntrada.Text))+273.15);
+        edResul.Text := FormatFloat('###,###,###0.000', conta);
+        lbTemp.Caption := 'K';
+    end;
+
+   //            <---Fahrenheit--->
+
+   //Fahrenheit para Celsius
+   if((cbMedida.ItemIndex = 2) And (rgValorConverter.ItemIndex = 0))then
+   begin
+        conta:= ((StrToInt(edEntrada.Text)- 32) * (5/9));
+        edResul.Text := FormatFloat('###,###,###0.000', conta);
+        lbTemp.Caption := 'ºC';
+    end;
+    //Fahrenheit para Fahrenheit
+  if((cbMedida.ItemIndex = 2) And (rgValorConverter.ItemIndex = 1))then
+   begin
+        edResul.Text := edEntrada.Text;
+        lbTemp.Caption := 'ºF';
+    end;
+    //Fahrenheit para Kelvin
+   if((cbMedida.ItemIndex = 2) And (rgValorConverter.ItemIndex = 2))then
+   begin
+        conta :=  ((StrToInt(edEntrada.Text)- 32) * (5/9)) + 273.15;
+        edResul.Text := FormatFloat('###,###,###0.000', conta);
+        lbTemp.Caption := 'K';
+    end;
+
+   //            <---Kelvin--->
+
+   //Kelvin para Celsius
+   if((cbMedida.ItemIndex = 3) And (rgValorConverter.ItemIndex = 0))then
+   begin
+        conta:= (((StrToInt(edEntrada.Text))-273.15));
+        edResul.Text := FormatFloat('###,###,##0.00', conta);
+        lbTemp.Caption := 'ºC';
+    end;
+    //Kelvin para Fahrenheit
+  if((cbMedida.ItemIndex = 3) And (rgValorConverter.ItemIndex = 1))then
+   begin
+        conta := (((StrToInt(edEntrada.Text))-273.15)*(9/5))+32;
+        edResul.Text := FormatFloat('###,###,##0.00', conta);
+        lbTemp.Caption := 'ºF';
+    end;
+    //Kelvin para Kelvin
+   if((cbMedida.ItemIndex = 3) And (rgValorConverter.ItemIndex = 2))then
+   begin
+        edResul.Text := edEntrada.Text;
+        lbTemp.Caption := 'K';
     end;
 end;
 
