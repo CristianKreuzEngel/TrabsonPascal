@@ -76,13 +76,27 @@ object Form1: TForm1
       TabOrder = 3
       OnClick = btConverterClick
     end
-    object edResul: TEdit
-      Left = 256
-      Top = 311
-      Width = 121
+    object GroupBox2: TGroupBox
+      Left = 232
+      Top = 320
+      Width = 145
       Height = 41
-      Enabled = False
+      Color = clWhite
+      ParentBackground = False
+      ParentColor = False
       TabOrder = 4
+      object lbResultado: TLabel
+        Left = 3
+        Top = 3
+        Width = 7
+        Height = 33
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -27
+        Font.Name = 'Roboto'
+        Font.Style = []
+        ParentFont = False
+      end
     end
   end
 end

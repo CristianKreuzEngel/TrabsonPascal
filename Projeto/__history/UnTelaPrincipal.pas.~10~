@@ -16,7 +16,8 @@ type
     Label2: TLabel;
     rgValorConverter: TRadioGroup;
     btConverter: TButton;
-    edResul: TEdit;
+    GroupBox2: TGroupBox;
+    lbResultado: TLabel;
     procedure btConverterClick(Sender: TObject);
   private
     { Private declarations }
@@ -33,18 +34,9 @@ implementation
 
 procedure TForm1.btConverterClick(Sender: TObject);
 begin
-  //conversão Celsius
-  if((cbMedida.ItemIndex = 1) And (rgValorConverter.ItemIndex = 0))then
+  if((cbMedida.Items.Text = 'Celsius') And (rgValorConverter.Items.Text = 'Celsius'))then
    begin
-        edResul.Text := edEntrada.Text
-    end;
-  if((cbMedida.ItemIndex = 1) And (rgValorConverter.ItemIndex = 0))then
-   begin
-        edResul.Text := edEntrada.Text
-    end;
-   if((cbMedida.ItemIndex = 1) And (rgValorConverter.ItemIndex = 0))then
-   begin
-        edResul.Text := edEntrada.Text
+      lbResultado.Caption := edEntrada.Text
     end;
 end;
 

@@ -55,7 +55,7 @@ object Form1: TForm1
         'Fahrenheit'
         'Kelvin')
     end
-    object rgValorConverter: TRadioGroup
+    object RadioGroup1: TRadioGroup
       Left = 56
       Top = 128
       Width = 321
@@ -69,20 +69,33 @@ object Form1: TForm1
     end
     object btConverter: TButton
       Left = 56
-      Top = 311
+      Top = 320
       Width = 144
       Height = 41
       Caption = 'CONVERTER'
       TabOrder = 3
-      OnClick = btConverterClick
     end
-    object edResul: TEdit
-      Left = 256
-      Top = 311
-      Width = 121
+    object GroupBox2: TGroupBox
+      Left = 232
+      Top = 320
+      Width = 145
       Height = 41
-      Enabled = False
+      Color = clWhite
+      ParentBackground = False
+      ParentColor = False
       TabOrder = 4
+      object lbResultado: TLabel
+        Left = 3
+        Top = 3
+        Width = 7
+        Height = 33
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -27
+        Font.Name = 'Roboto'
+        Font.Style = []
+        ParentFont = False
+      end
     end
   end
 end
