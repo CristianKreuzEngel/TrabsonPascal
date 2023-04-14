@@ -10,14 +10,13 @@ uses
 type
   TForm1 = class(TForm)
     Image1: TImage;
+    btConverter: TButton;
     edEntrada: TEdit;
     edResul: TEdit;
     lbTemp: TLabel;
     cbMedida: TComboBox;
     rgValorConverter: TRadioGroup;
-    Panel1: TPanel;
-    Image2: TImage;
-    procedure Panel1Click(Sender: TObject);
+    procedure btConverterClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -31,7 +30,7 @@ implementation
 
 {$R *.dfm}
 
-procedure TForm1.Panel1Click(Sender: TObject);
+procedure TForm1.btConverterClick(Sender: TObject);
 begin
   var conta: real;
   //            <---Celsius--->
