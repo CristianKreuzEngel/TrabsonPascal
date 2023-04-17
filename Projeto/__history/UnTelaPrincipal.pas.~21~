@@ -50,7 +50,6 @@ procedure TForm1.btnAjudaClick(Sender: TObject);
 begin
     //No botão ajuda mostrar as fórmulas em um showmessage
     //OBS: Não precisa criar método ou procedure
-    // 1 é o Celsius, 2 é o Fahrenheit e 3 é o Kelvin
     //Exemplo:
 
     //Mensagem de Celsius para Fahrenheit
@@ -58,41 +57,6 @@ begin
     begin
         ShowMessage('Para conversão de Celsius(ºC) para Fahrenheit(ºF) utiliza-se a seguinte fórmula:  ((Medida em Celsius) * 9/5) + 32');
     end;
-    if ((cbMedida.ItemIndex = 1) and (imgKelvin.Visible = true)) then
-      begin
-        ShowMessage('Para a conversão de Celsius(°C) para Kelvin (K) utiliza-se a seguinte fórmula:((Medida em Celsius) + 273.15');
-      end;
-      if ((cbMedida.ItemIndex = 1) and (imgCelsius.Visible = true)) then
-      begin
-        ShowMessage('Para a conversão de Celsius(°C) para Celsius (°C),o valor nao mudará, pois foi escolhida é a mesma.');
-      end;
-
-      //Mensagem de Fahrenheit para as outras medidas
-      if ((cbMedida.ItemIndex = 2) and (imgFahrenheit.Visible = true)) then
-      begin
-        ShowMessage ('Para a conversão de Fahrenheit (°F) para Fahrenheit (°F), o valor nao mudará, pois foi escolhida é a mesma.');
-      end;
-      if ((cbMedida.ItemIndex = 2) and (imgCelsius.Visible = true)) then
-      begin
-        ShowMessage('Para a conversão de Fahrenheit(°F) para Celsius (°C) utiliza-se a seguinte fórmula:((Medida em Fahrenheit) - 32) * (5 / 9)')
-      end;
-      if ((cbMedida.ItemIndex = 2) and (imgKelvin.Visible = true)) then
-      begin
-        ShowMessage ('Para a conversão de Fahrenheit(°F) para Kelvin (K) utiliza-se a seguinte fórmula:((Medida em Fahrenheit) - 32) * (5 / 9)) + 273.15)')
-      end;
-      //Mensagem de Kelvin para as outras medidas
-      if ((cbMedida.ItemIndex = 3) and (imgFahrenheit.Visible = true)) then
-      begin
-        ShowMessage ('Para a conversão de Fahrenheit (°F) para Fahrenheit (°F), o valor nao mudará, pois foi escolhida é a mesma');
-      end;
-      if ((cbMedida.ItemIndex = 3) and (imgCelsius.Visible = true)) then
-      begin
-        ShowMessage ('Para a conversão de Kelvin (K) para Celsius (°C) utiliza-se a seguinte fórmula:((Medida em Kelvin)) - 273.15) * (9 / 5) + 32');
-      end;
-      if ((cbMedida.ItemIndex = 3) and (imgKelvin.Visible = true))  then
-      begin
-        ShowMessage ('Para a conversão de Kelvin (K) para Kelvin (K), o valor nao mudará, pois foi escolhida é a mesma.')
-      end;
 end;
 
  //controle do select Celsius
