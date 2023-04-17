@@ -26,6 +26,9 @@ type
     btnFahrenheit: TPanel;
     btnKelvin: TPanel;
     btnAjuda: TPanel;
+    imgNormal: TImage;
+    imgFrio: TImage;
+    imgQuente: TImage;
     procedure btnConverterClick(Sender: TObject);
     procedure btnCelsiusClick(Sender: TObject);
     procedure btnFahrenheitClick(Sender: TObject);
@@ -111,7 +114,8 @@ begin
     // Conversão Celsius para Celsius
   if ((cbMedida.ItemIndex = 1) And (imgCelsius.Visible = true)) then
   begin
-    edResul.Text := edEntrada.Text;
+    conta := StrToFloat(edEntrada.Text);
+    edResul.Text := FloatToStr(conta);
     lbTemp.Caption := 'ºC';
   end;
   // Celsius para Fahrenheit
@@ -141,7 +145,8 @@ begin
   // Fahrenheit para Fahrenheit
   if ((cbMedida.ItemIndex = 2) And (imgFahrenheit.Visible = true)) then
   begin
-    edResul.Text := edEntrada.Text;
+    conta := StrToFloat(edEntrada.Text);
+    edResul.Text := FloatToStr(conta);
     lbTemp.Caption := 'ºF';
   end;
   // Fahrenheit para Kelvin
@@ -171,9 +176,32 @@ begin
   // Kelvin para Kelvin
   if ((cbMedida.ItemIndex = 3) And (imgKelvin.Visible = true)) then
   begin
-    edResul.Text := edEntrada.Text;
+    conta := StrToFloat(edEntrada.Text);
+    edResul.Text := FloatToStr(conta);
     lbTemp.Caption := 'K';
   end;
+
+
+  //controle dos termometros
+  if((imgFahrenheit.Visible = true) and (conta > 77)) or ((imgCelsius.Visible = true) and (conta > 25)) or ((imgKelvin.Visible = true) and (conta > 298.15))then
+  begin
+      imgQuente.Visible := true;
+      imgFrio.Visible := false;
+      imgNormal.Visible := false;
+  end;
+  if((imgFahrenheit.Visible = true) and ((conta >= 59) and (conta < 77))) or ((imgCelsius.Visible = true) and ((conta >= 15) and (conta < 25))) or ((imgKelvin.Visible = true) and ((conta >= 288.15) and (conta < 298.15))) then
+  begin
+      imgQuente.Visible := false;
+      imgFrio.Visible := false;
+      imgNormal.Visible := true;
+  end;
+  if((imgFahrenheit.Visible = true) and (conta < 59)) or ((imgCelsius.Visible = true) and (conta < 15)) or ((imgKelvin.Visible = true) and (conta < 288.15))then
+  begin
+      imgQuente.Visible := false;
+      imgFrio.Visible := true;
+      imgNormal.Visible := false;
+  end;
+
 end;
 
 //controle do select Fahrenheit
