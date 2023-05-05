@@ -1,0 +1,223 @@
+unit UnTelaPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Imaging.pngimage, Vcl.ExtCtrls,
+  Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    imgBackground: TImage;
+    edEntrada: TEdit;
+    edResul: TEdit;
+    lbTemp: TLabel;
+    cbMedida: TComboBox;
+    btnConverter: TPanel;
+    imgBackgound2: TImage;
+    imgAjuda2: TImage;
+    imgAjuda: TImage;
+    imgFahrenheit: TImage;
+    imgKelvin: TImage;
+    btnCelsius: TPanel;
+    imgCelsius: TImage;
+    btnFahrenheit: TPanel;
+    btnKelvin: TPanel;
+    btnAjuda: TPanel;
+    imgNormal: TImage;
+    imgFrio: TImage;
+    imgQuente: TImage;
+    procedure btnConverterClick(Sender: TObject);
+    procedure btnCelsiusClick(Sender: TObject);
+    procedure btnFahrenheitClick(Sender: TObject);
+    procedure btnKelvinClick(Sender: TObject);
+    procedure btnAjudaClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+
+
+procedure TForm1.btnAjudaClick(Sender: TObject);
+begin
+    //No botão ajuda mostrar as fórmulas em um showmessage
+    //OBS: Não precisa criar método ou procedure
+    // 1 é o Celsius, 2 é o Fahrenheit e 3 é o Kelvin
+    //Exemplo:
+
+    //Mensagem de Celsius para Fahrenheit
+    if((cbMedida.ItemIndex = 1) and (imgFahrenheit.Visible = true)) then
+    begin
+        ShowMessage('Para conversão de Celsius(ºC) para Fahrenheit(ºF) utiliza-se a seguinte fórmula:  ((Medida em Celsius) * 9/5) + 32');
+    end;
+    if ((cbMedida.ItemIndex = 1) and (imgKelvin.Visible = true)) then
+      begin
+        ShowMessage('Para a conversão de Celsius(°C) para Kelvin (K) utiliza-se a seguinte fórmula:((Medida em Celsius) + 273.15');
+      end;
+      if ((cbMedida.ItemIndex = 1) and (imgCelsius.Visible = true)) then
+      begin
+        ShowMessage('Para a conversão de Celsius(°C) para Celsius (°C),o valor nao mudará, pois foi escolhida é a mesma.');
+      end;
+
+      //Mensagem de Fahrenheit para as outras medidas
+      if ((cbMedida.ItemIndex = 2) and (imgFahrenheit.Visible = true)) then
+      begin
+        ShowMessage ('Para a conversão de Fahrenheit (°F) para Fahrenheit (°F), o valor nao mudará, pois foi escolhida é a mesma.');
+      end;
+      if ((cbMedida.ItemIndex = 2) and (imgCelsius.Visible = true)) then
+      begin
+        ShowMessage('Para a conversão de Fahrenheit(°F) para Celsius (°C) utiliza-se a seguinte fórmula:((Medida em Fahrenheit) - 32) * (5 / 9)')
+      end;
+      if ((cbMedida.ItemIndex = 2) and (imgKelvin.Visible = true)) then
+      begin
+        ShowMessage ('Para a conversão de Fahrenheit(°F) para Kelvin (K) utiliza-se a seguinte fórmula:((Medida em Fahrenheit) - 32) * (5 / 9)) + 273.15)')
+      end;
+      //Mensagem de Kelvin para as outras medidas
+      if ((cbMedida.ItemIndex = 3) and (imgFahrenheit.Visible = true)) then
+      begin
+        ShowMessage ('Para a conversão de Fahrenheit (°F) para Fahrenheit (°F), o valor nao mudará, pois foi escolhida é a mesma');
+      end;
+      if ((cbMedida.ItemIndex = 3) and (imgCelsius.Visible = true)) then
+      begin
+        ShowMessage ('Para a conversão de Kelvin (K) para Celsius (°C) utiliza-se a seguinte fórmula:((Medida em Kelvin)) - 273.15) * (9 / 5) + 32');
+      end;
+      if ((cbMedida.ItemIndex = 3) and (imgKelvin.Visible = true))  then
+      begin
+        ShowMessage ('Para a conversão de Kelvin (K) para Kelvin (K), o valor nao mudará, pois foi escolhida é a mesma.')
+      end;
+end;
+
+ //controle do select Celsius
+procedure TForm1.btnCelsiusClick(Sender: TObject);
+begin
+    imgCelsius.Visible := true;
+    imgFahrenheit.Visible := false;
+    imgKelvin.Visible := false;
+end;
+
+procedure TForm1.btnConverterClick(Sender: TObject);
+  var
+    conta: real;
+begin
+    // <---Celsius--->
+    // Conversão Celsius para Celsius
+  if ((cbMedida.ItemIndex = 1) And (imgCelsius.Visible = true)) then
+  begin
+    conta := StrToFloat(edEntrada.Text);
+    edResul.Text := FloatToStr(conta);
+    lbTemp.Caption := 'ºC';
+  end;
+  // Celsius para Fahrenheit
+  if ((cbMedida.ItemIndex = 1) And (imgFahrenheit.Visible = true)) then
+  begin
+    conta := ((StrToFloat(edEntrada.Text) * (9 / 5)) + 32);
+    edResul.Text := FormatFloat('###,###,###0.000', conta);
+    lbTemp.Caption := 'ºF';
+  end;
+  // Celsius para Kelvin
+  if ((cbMedida.ItemIndex = 1) And (imgKelvin.Visible = true)) then
+  begin
+    conta := ((StrToFloat(edEntrada.Text)) + 273.15);
+    edResul.Text := FormatFloat('###,###,###0.000', conta);
+    lbTemp.Caption := 'K';
+  end;
+
+  // <---Fahrenheit--->
+
+  // Fahrenheit para Celsius
+  if ((cbMedida.ItemIndex = 2) And (imgCelsius.Visible = true)) then
+  begin
+    conta := ((StrToFloat(edEntrada.Text) - 32) * (5 / 9));
+    edResul.Text := FormatFloat('###,###,###0.000', conta);
+    lbTemp.Caption := 'ºC';
+  end;
+  // Fahrenheit para Fahrenheit
+  if ((cbMedida.ItemIndex = 2) And (imgFahrenheit.Visible = true)) then
+  begin
+    conta := StrToFloat(edEntrada.Text);
+    edResul.Text := FloatToStr(conta);
+    lbTemp.Caption := 'ºF';
+  end;
+  // Fahrenheit para Kelvin
+  if ((cbMedida.ItemIndex = 2) And (imgKelvin.Visible = true)) then
+  begin
+    conta := ((StrToFloat(edEntrada.Text) - 32) * (5 / 9)) + 273.15;
+    edResul.Text := FormatFloat('###,###,###0.000', conta);
+    lbTemp.Caption := 'K';
+  end;
+
+  // <---Kelvin--->
+
+  // Kelvin para Celsius
+  if ((cbMedida.ItemIndex = 3) And (imgCelsius.Visible = true)) then
+  begin
+    conta := (((StrToFloat(edEntrada.Text)) - 273.15));
+    edResul.Text := FormatFloat('###,###,##0.00', conta);
+    lbTemp.Caption := 'ºC';
+  end;
+  // Kelvin para Fahrenheit
+  if ((cbMedida.ItemIndex = 3) And (imgFahrenheit.Visible = true)) then
+  begin
+    conta := (((StrToFloat(edEntrada.Text)) - 273.15) * (9 / 5)) + 32;
+    edResul.Text := FormatFloat('###,###,##0.00', conta);
+    lbTemp.Caption := 'ºF';
+  end;
+  // Kelvin para Kelvin
+  if ((cbMedida.ItemIndex = 3) And (imgKelvin.Visible = true)) then
+  begin
+    conta := StrToFloat(edEntrada.Text);
+    edResul.Text := FloatToStr(conta);
+    lbTemp.Caption := 'K';
+  end;
+
+
+  //controle dos termometros
+  if((imgFahrenheit.Visible = true) and (conta > 77)) or ((imgCelsius.Visible = true) and (conta > 25)) or ((imgKelvin.Visible = true) and (conta > 298.15))then
+  begin
+      imgQuente.Visible := true;
+      imgFrio.Visible := false;
+      imgNormal.Visible := false;
+  end;
+  if((imgFahrenheit.Visible = true) and ((conta >= 59) and (conta < 77))) or ((imgCelsius.Visible = true) and ((conta >= 15) and (conta < 25))) or ((imgKelvin.Visible = true) and ((conta >= 288.15) and (conta < 298.15))) then
+  begin
+      imgQuente.Visible := false;
+      imgFrio.Visible := false;
+      imgNormal.Visible := true;
+  end;
+  if((imgFahrenheit.Visible = true) and (conta < 59)) or ((imgCelsius.Visible = true) and (conta < 15)) or ((imgKelvin.Visible = true) and (conta < 288.15))then
+  begin
+      imgQuente.Visible := false;
+      imgFrio.Visible := true;
+      imgNormal.Visible := false;
+  end;
+
+end;
+
+//controle do select Fahrenheit
+procedure TForm1.btnFahrenheitClick(Sender: TObject);
+begin
+    imgCelsius.Visible := false;
+    imgFahrenheit.Visible := true;
+    imgKelvin.Visible := false;
+end;
+
+//controle do select Kelvin
+procedure TForm1.btnKelvinClick(Sender: TObject);
+begin
+    imgCelsius.Visible := false;
+    imgFahrenheit.Visible := false;
+    imgKelvin.Visible := true;
+end;
+
+end.
