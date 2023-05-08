@@ -2,8 +2,8 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2023/05/05 19:43:49.000.361,=C:\Users\Sr Engel\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2023/05/05 19:44:20.000.031,C:\Users\Sr Engel\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\Sr Engel\Documents\Embarcadero\Studio\Projects\unProjectJogoNova.dfm</Transaction>
-    <Transaction>2023/05/05 19:44:20.000.031,C:\Users\Sr Engel\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Sr Engel\Documents\Embarcadero\Studio\Projects\unProjectJogoNova.pas</Transaction>
-    <Transaction>2023/05/05 19:44:31.000.319,C:\Users\Sr Engel\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Sr Engel\Documents\Embarcadero\Studio\Projects\ProjJogoDaNova.dproj</Transaction>
+    <Transaction>2023/05/05 19:44:20.000.031,C:\Users\Sr Engel\Documents\Embarcadero\Studio\Projects\unProjectJogoNova.pas=C:\Users\Sr Engel\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/05/05 19:44:20.000.031,C:\Users\Sr Engel\Documents\Embarcadero\Studio\Projects\unProjectJogoNova.dfm=C:\Users\Sr Engel\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2023/05/05 19:44:31.000.319,C:\Users\Sr Engel\Documents\Embarcadero\Studio\Projects\ProjJogoDaNova.dproj=C:\Users\Sr Engel\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
   </Transactions>
 </BorlandProject>
