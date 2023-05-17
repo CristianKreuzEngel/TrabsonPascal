@@ -66,8 +66,6 @@ type
     procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
-
-    PRocedure checarGanhador;
   public
     { Public declarations }
   end;
@@ -85,56 +83,8 @@ procedure TForm1.Button1Click(Sender: TObject);
 begin
 
   GJogadorDaVez := 1;
-
   tiro1.Visible := false;
-  tiro2.Visible := false;
-  tiro3.Visible := false;
-  tiro4.Visible := false;
-  tiro5.Visible := false;
-  tiro6.Visible := false;
-  tiro7.Visible := false;
-  tiro8.Visible := false;
-  tiro9.Visible := false;
-
   faca1.Visible := false;
-  faca2.Visible := false;
-  faca3.Visible := false;
-  faca4.Visible := false;
-  faca5.Visible := false;
-  faca6.Visible := false;
-  faca7.Visible := false;
-  faca8.Visible := false;
-  faca9.Visible := false;
-end;
-
-procedure TForm1.checarGanhador;
-begin
-  if (faca1.Visible and faca2.Visible and faca3.Visible) or
-     (faca4.Visible and faca5.Visible and faca6.Visible) or
-     (faca7.Visible and faca8.Visible and faca9.Visible) or
-     (faca1.Visible and faca4.Visible and faca7.Visible) or
-     (faca2.Visible and faca5.Visible and faca8.Visible) or
-     (faca3.Visible and faca6.Visible and faca9.Visible) or
-     (faca1.Visible and faca5.Visible and faca9.Visible) or
-     (faca3.Visible and faca5.Visible and faca7.Visible)
-   then
-   begin
-  ShowMessage('Jogador 1 ganhou!');
-  end
-  else if
-     (tiro1.Visible and tiro2.Visible and tiro3.Visible) or
-     (tiro4.Visible and tiro5.Visible and tiro6.Visible) or
-     (tiro7.Visible and tiro8.Visible and tiro9.Visible) or
-     (tiro1.Visible and tiro4.Visible and tiro7.Visible) or
-     (tiro2.Visible and tiro5.Visible and tiro8.Visible) or
-     (tiro3.Visible and tiro6.Visible and tiro9.Visible) or
-     (tiro1.Visible and tiro5.Visible and tiro9.Visible) or
-     (tiro3.Visible and tiro5.Visible and tiro7.Visible)
-      then
-  begin
-    ShowMessage('Jogador 2 ganhou!');
-  end
-
 end;
 
 procedure TForm1.Panel1Click(Sender: TObject);
@@ -157,48 +107,15 @@ begin
     imagemFaca := faca3;
     imagemTiro := tiro3;
   end;
-   if Sender = Panel4 then
-   begin
-    imagemFaca := faca4;
-    imagemTiro := tiro4;
-   end;
-   if Sender = Panel5 then
-   begin
-     imagemFaca := faca5;
-     imagemTiro := tiro5;
-   end;
-   if Sender = Panel6 then
-   begin
-     imagemFaca := faca6;
-     imagemTiro := tiro6;
-   end;
-   if Sender = Panel7 then
-   begin
-     imagemFaca := faca7;
-     imagemTiro := faca7;
-   end;
-   if Sender = Panel8 then
-   begin
-     imagemFaca :=  faca8;
-     imagemTiro := tiro8;
-   end;
-   if Sender = Panel9 then
-   begin
-     imagemFaca := faca9;
-     imagemTiro := tiro9;
-   end;
-
 
   if GJogadorDaVez = 1 then
   begin
     imagemTiro.Visible := true;
-    checarGanhador;
     GJogadorDaVez := 2;
   end
   else
   begin
     imagemFaca.Visible := true;
-    checarGanhador;
     GJogadorDaVez := 1;
   end;
 end;

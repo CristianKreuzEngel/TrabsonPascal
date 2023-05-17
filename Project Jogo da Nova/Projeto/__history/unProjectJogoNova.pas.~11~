@@ -109,32 +109,9 @@ end;
 
 procedure TForm1.checarGanhador;
 begin
-  if (faca1.Visible and faca2.Visible and faca3.Visible) or
-     (faca4.Visible and faca5.Visible and faca6.Visible) or
-     (faca7.Visible and faca8.Visible and faca9.Visible) or
-     (faca1.Visible and faca4.Visible and faca7.Visible) or
-     (faca2.Visible and faca5.Visible and faca8.Visible) or
-     (faca3.Visible and faca6.Visible and faca9.Visible) or
-     (faca1.Visible and faca5.Visible and faca9.Visible) or
-     (faca3.Visible and faca5.Visible and faca7.Visible)
-   then
-   begin
-  ShowMessage('Jogador 1 ganhou!');
-  end
-  else if
-     (tiro1.Visible and tiro2.Visible and tiro3.Visible) or
-     (tiro4.Visible and tiro5.Visible and tiro6.Visible) or
-     (tiro7.Visible and tiro8.Visible and tiro9.Visible) or
-     (tiro1.Visible and tiro4.Visible and tiro7.Visible) or
-     (tiro2.Visible and tiro5.Visible and tiro8.Visible) or
-     (tiro3.Visible and tiro6.Visible and tiro9.Visible) or
-     (tiro1.Visible and tiro5.Visible and tiro9.Visible) or
-     (tiro3.Visible and tiro5.Visible and tiro7.Visible)
-      then
-  begin
-    ShowMessage('Jogador 2 ganhou!');
-  end
-
+ {  if ((StringGrid1.Cells[0, 0] = StringGrid1.Cells[1, 0]) And
+    (StringGrid1.Cells[0, 0] = StringGrid1.Cells[2, 0]) And
+    (StringGrid1.Cells[0, 0] <> '')) or}
 end;
 
 procedure TForm1.Panel1Click(Sender: TObject);

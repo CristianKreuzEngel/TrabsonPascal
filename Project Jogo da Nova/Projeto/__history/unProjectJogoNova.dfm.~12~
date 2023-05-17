@@ -28976,8 +28976,8 @@ object Form1: TForm1
     end
   end
   object Panel3: TPanel
-    Left = 481
-    Top = 91
+    Left = 247
+    Top = 281
     Width = 120
     Height = 88
     BevelOuter = bvNone
@@ -32829,8 +32829,8 @@ object Form1: TForm1
     end
   end
   object Panel6: TPanel
-    Left = 485
-    Top = 216
+    Left = 329
+    Top = 337
     Width = 120
     Height = 87
     BevelOuter = bvNone
@@ -35397,8 +35397,8 @@ object Form1: TForm1
     end
   end
   object Panel8: TPanel
-    Left = 343
-    Top = 341
+    Left = 481
+    Top = 216
     Width = 104
     Height = 89
     BevelOuter = bvNone
