@@ -131,18 +131,6 @@ begin
   begin
     ShowMessage('Jogador 2 ganhou!');
   end
-  else if (faca1.Visible or tiro1.Visible) And
-    (faca2.Visible or tiro2.Visible) and
-    (faca3.Visible or tiro3.Visible) and
-    (faca4.Visible or tiro4.Visible) and
-    (faca5.Visible or tiro5.Visible) and
-    (faca6.Visible or tiro6.Visible) and
-    (faca7.Visible or tiro7.Visible) and
-    (faca8.Visible or tiro8.Visible) and
-    (faca9.Visible or tiro9.Visible)  then
-  begin
-      ShowMessage('Deu velha!');
-  end;
 
 end;
 
