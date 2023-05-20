@@ -16078,7 +16078,7 @@ object Form1: TForm1
       E0EB751CCCDF682B493FFF0F10F4F7E98744B1CB0000000049454E44AE426082}
     Stretch = True
   end
-  object carta1: TImage
+  object escudo: TImage
     Left = 185
     Top = 8
     Width = 49
@@ -16471,7 +16471,7 @@ object Form1: TForm1
       E2D6A569088D6495547A3E2BC2C164B4F0976B77B9EACB30528A8F447FFFD9}
     Stretch = True
   end
-  object carta2: TImage
+  object azarao: TImage
     Left = 265
     Top = 8
     Width = 49
@@ -16959,8 +16959,8 @@ object Form1: TForm1
       0FBE3E6BDDC1E0E9E1E3CB026B56727767FFD9}
     Stretch = True
   end
-  object carta3: TImage
-    Left = 343
+  object duasjogadas: TImage
+    Left = 344
     Top = 8
     Width = 49
     Height = 49
@@ -17424,7 +17424,7 @@ object Form1: TForm1
     ShowHint = False
     Stretch = True
   end
-  object carta4: TImage
+  object trocasimbolo: TImage
     Left = 425
     Top = 8
     Width = 49
@@ -17843,7 +17843,7 @@ object Form1: TForm1
       A66574AC7FFFD9}
     Stretch = True
   end
-  object carta5: TImage
+  object destruacarta: TImage
     Left = 505
     Top = 8
     Width = 49
@@ -18307,7 +18307,7 @@ object Form1: TForm1
       75293F7B27E75F4581C3430D05181CF5B10DBBB3FFD9}
     Stretch = True
   end
-  object carta6: TImage
+  object destruirsimbolo: TImage
     Left = 185
     Top = 456
     Width = 49
@@ -18742,7 +18742,7 @@ object Form1: TForm1
       D692D5A48F4E9E3A34E9F22F53FFD9}
     Stretch = True
   end
-  object carta7: TImage
+  object cartaproadversario: TImage
     Left = 265
     Top = 456
     Width = 49
@@ -19177,8 +19177,8 @@ object Form1: TForm1
       791FFFD9}
     Stretch = True
   end
-  object carta8: TImage
-    Left = 343
+  object joguenavez: TImage
+    Left = 345
     Top = 456
     Width = 49
     Height = 49
@@ -19530,7 +19530,7 @@ object Form1: TForm1
       155CB8D49BE6F5AC70B97D3A52E6477FD665CBC87FFFD9}
     Stretch = True
   end
-  object carta9: TImage
+  object jogarnovamente: TImage
     Left = 425
     Top = 456
     Width = 49
@@ -19974,7 +19974,7 @@ object Form1: TForm1
       9096259DB71278AE76E276593F0AFA3C0E029E169FB381CD57153A92B9FFD9}
     Stretch = True
   end
-  object carta10: TImage
+  object peguecarta: TImage
     Left = 505
     Top = 456
     Width = 49
@@ -20952,7 +20952,6 @@ object Form1: TForm1
       0200102134010088109A000044084D00002284260000114213008008A1090040
       C42F7983161CEBFFAFBB0000000049454E44AE426082}
     Stretch = True
-    Visible = False
   end
   object caveira2: TImage
     Left = 16
@@ -21549,7 +21548,6 @@ object Form1: TForm1
       0200102134010088109A000044084D00002284260000114213008008A1090040
       C42F7983161CEBFFAFBB0000000049454E44AE426082}
     Stretch = True
-    Visible = False
   end
   object caveira3: TImage
     Left = 16
@@ -22146,7 +22144,6 @@ object Form1: TForm1
       0200102134010088109A000044084D00002284260000114213008008A1090040
       C42F7983161CEBFFAFBB0000000049454E44AE426082}
     Stretch = True
-    Visible = False
   end
   object caveira4: TImage
     Left = 711
@@ -22743,7 +22740,6 @@ object Form1: TForm1
       0200102134010088109A000044084D00002284260000114213008008A1090040
       C42F7983161CEBFFAFBB0000000049454E44AE426082}
     Stretch = True
-    Visible = False
   end
   object caveira5: TImage
     Left = 704
@@ -23340,7 +23336,6 @@ object Form1: TForm1
       0200102134010088109A000044084D00002284260000114213008008A1090040
       C42F7983161CEBFFAFBB0000000049454E44AE426082}
     Stretch = True
-    Visible = False
   end
   object caveira6: TImage
     Left = 704
@@ -23937,7 +23932,6 @@ object Form1: TForm1
       0200102134010088109A000044084D00002284260000114213008008A1090040
       C42F7983161CEBFFAFBB0000000049454E44AE426082}
     Stretch = True
-    Visible = False
   end
   object coroa1: TImage
     Left = -9
@@ -24350,7 +24344,6 @@ object Form1: TForm1
       158426000000AC20340100006005A1090000002B084D00000058F1FF015C980A
       95ED323CBA0000000049454E44AE426082}
     Stretch = True
-    Visible = False
   end
   object coroa2: TImage
     Left = -9
@@ -24763,7 +24756,6 @@ object Form1: TForm1
       158426000000AC20340100006005A1090000002B084D00000058F1FF015C980A
       95ED323CBA0000000049454E44AE426082}
     Stretch = True
-    Visible = False
   end
   object coroa3: TImage
     Left = -9
@@ -25176,11 +25168,10 @@ object Form1: TForm1
       158426000000AC20340100006005A1090000002B084D00000058F1FF015C980A
       95ED323CBA0000000049454E44AE426082}
     Stretch = True
-    Visible = False
   end
   object coroa4: TImage
     Left = 672
-    Top = 182
+    Top = 185
     Width = 153
     Height = 160
     Picture.Data = {
@@ -25589,7 +25580,6 @@ object Form1: TForm1
       158426000000AC20340100006005A1090000002B084D00000058F1FF015C980A
       95ED323CBA0000000049454E44AE426082}
     Stretch = True
-    Visible = False
   end
   object coroa5: TImage
     Left = 672
@@ -26002,11 +25992,10 @@ object Form1: TForm1
       158426000000AC20340100006005A1090000002B084D00000058F1FF015C980A
       95ED323CBA0000000049454E44AE426082}
     Stretch = True
-    Visible = False
   end
   object coroa6: TImage
     Left = 672
-    Top = 393
+    Top = 394
     Width = 153
     Height = 160
     Picture.Data = {
@@ -26415,26 +26404,12 @@ object Form1: TForm1
       158426000000AC20340100006005A1090000002B084D00000058F1FF015C980A
       95ED323CBA0000000049454E44AE426082}
     Stretch = True
-    Visible = False
   end
   object Image2: TImage
-    Left = 672
-    Top = 290
+    Left = 664
+    Top = 296
     Width = 105
     Height = 105
-  end
-  object textVez: TLabel
-    Left = 720
-    Top = 152
-    Width = 87
-    Height = 24
-    Caption = 'Jogador 1'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clHighlightText
-    Font.Height = -20
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentFont = False
   end
   object Panel1: TPanel
     Left = 180
@@ -37990,8 +37965,8 @@ object Form1: TForm1
     end
   end
   object Button1: TButton
-    Left = 711
-    Top = 185
+    Left = 672
+    Top = 128
     Width = 75
     Height = 25
     Caption = 'Button1'
