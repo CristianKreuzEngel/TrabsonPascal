@@ -11,6 +11,7 @@ object Form1: TForm1
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Image1: TImage
@@ -22151,8 +22152,8 @@ object Form1: TForm1
   object caveira4: TImage
     Left = 711
     Top = 216
-    Width = 105
-    Height = 105
+    Width = 92
+    Height = 112
     Picture.Data = {
       0954506E67496D61676589504E470D0A1A0A0000000D494844520000029A0000
       01770806000000053EEB3E000000097048597300000EC400000EC401952B0E1B
@@ -25179,10 +25180,10 @@ object Form1: TForm1
     Visible = False
   end
   object coroa4: TImage
-    Left = 672
+    Left = 677
     Top = 182
-    Width = 153
-    Height = 160
+    Width = 157
+    Height = 165
     Picture.Data = {
       0954506E67496D61676589504E470D0A1A0A0000000D494844520000029A0000
       01770806000000053EEB3E000000097048597300000EC400000EC401952B0E1B
@@ -25594,8 +25595,8 @@ object Form1: TForm1
   object coroa5: TImage
     Left = 672
     Top = 290
-    Width = 153
-    Height = 160
+    Width = 166
+    Height = 161
     Picture.Data = {
       0954506E67496D61676589504E470D0A1A0A0000000D494844520000029A0000
       01770806000000053EEB3E000000097048597300000EC400000EC401952B0E1B
@@ -26007,7 +26008,7 @@ object Form1: TForm1
   object coroa6: TImage
     Left = 672
     Top = 393
-    Width = 153
+    Width = 165
     Height = 160
     Picture.Data = {
       0954506E67496D61676589504E470D0A1A0A0000000D494844520000029A0000
@@ -26429,6 +26430,32 @@ object Form1: TForm1
     Width = 87
     Height = 24
     Caption = 'Jogador 1'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clHighlightText
+    Font.Height = -20
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label1: TLabel
+    Left = 24
+    Top = 289
+    Width = 87
+    Height = 24
+    Caption = 'Jogador 1'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clHighlightText
+    Font.Height = -20
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 711
+    Top = 513
+    Width = 87
+    Height = 24
+    Caption = 'Jogador 2'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clHighlightText
     Font.Height = -20
@@ -37990,12 +38017,13 @@ object Form1: TForm1
     end
   end
   object Button1: TButton
-    Left = 711
+    Left = 720
     Top = 185
     Width = 75
     Height = 25
     Caption = 'Button1'
     TabOrder = 9
+    Visible = False
     OnClick = Button1Click
   end
 end

@@ -63,8 +63,6 @@ type
     Button1: TButton;
     faca1: TImage;
     textVez: TLabel;
-    Label1: TLabel;
-    Label2: TLabel;
     procedure Panel1Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure sorteioCarta();
@@ -74,11 +72,6 @@ type
 
     PRocedure checarGanhador;
     procedure iniciarJogo;
-    procedure exibirCarta(carta: TImage);
-    procedure trocarPosição;
-    procedure pulaVez;
-    procedure limpaCampo;
-    procedure trocaColuna(img1, img2, img3: TImage);
   public
     { Public declarations }
   end;
@@ -91,7 +84,6 @@ var
   controladorJog2: Integer;
   sorteador: Integer;
   estahExecutando: boolean;
-  aux: boolean;
 
 implementation
 
@@ -112,95 +104,57 @@ begin
   case sorteador of
     0:
       begin
-        exibirCarta(carta10);
-        trocaColuna(faca1, faca4, faca7);
-        trocaColuna(faca2, faca5, faca8);
-        trocaColuna(faca3, faca6, faca9);
 
-        trocaColuna(tiro1, tiro4, tiro7);
-        trocaColuna(tiro2, tiro5, tiro8);
-        trocaColuna(tiro3, tiro6, tiro9);
       end;
     1:
       begin
-        exibirCarta(carta1);
+
       end;
     2:
       begin
-        exibirCarta(carta2);
-        pulaVez;
-      end;
-    3:
-      begin
-        exibirCarta(carta3);
+        carta2.Visible := True;
+        carta2.Repaint;
+        sleep(3000);
+        Application.ProcessMessages;
+        carta2.Visible := False;
         if GJogadorDaVez = 1 then
-        begin
-          GJogadorDaVez := 1;
-          textVez.Caption := 'Jogador 1';
-        end
-        else
         begin
           GJogadorDaVez := 2;
           textVez.Caption := 'Jogador 2';
-        end;
-      end;
-    4:
-      begin
-        exibirCarta(carta4);
-        trocarPosição;
-      end;
-    5:
-      begin
-        exibirCarta(carta5);
-        limpaCampo;
-      end;
-    6:
-      begin
-        exibirCarta(carta6);
-      end;
-    7:
-      begin
-        exibirCarta(carta7);
-        trocaColuna(faca1, faca2, faca3);
-        trocaColuna(faca4, faca5, faca6);
-        trocaColuna(faca7, faca8, faca9);
-
-        trocaColuna(tiro1, tiro2, tiro3);
-        trocaColuna(tiro4, tiro5, tiro6);
-        trocaColuna(tiro7, tiro8, tiro9);
-      end;
-    8:
-      begin
-        exibirCarta(carta8);
-        if GJogadorDaVez = 1 then
-        begin
-          tiro1.Visible := false;
-          tiro2.Visible := false;
-          tiro3.Visible := false;
-          tiro4.Visible := false;
-          tiro5.Visible := false;
-          tiro6.Visible := false;
-          tiro7.Visible := false;
-          tiro8.Visible := false;
-          tiro9.Visible := false;
         end
         else
         begin
-          faca1.Visible := false;
-          faca2.Visible := false;
-          faca3.Visible := false;
-          faca4.Visible := false;
-          faca5.Visible := false;
-          faca6.Visible := false;
-          faca7.Visible := false;
-          faca8.Visible := false;
-          faca9.Visible := false;
-        end;
+          GJogadorDaVez := 1;
+          textVez.Caption := 'Jogador 1';
+        end ;
+      end;
+    3:
+      begin
+
+      end;
+    4:
+      begin
+
+      end;
+    5:
+      begin
+
+      end;
+    6:
+      begin
+
+      end;
+    7:
+      begin
+
+      end;
+    8:
+      begin
+
       end;
     9:
       begin
-        exibirCarta(carta9);
-        trocarPosição;
+
       end;
 
   end;
@@ -224,14 +178,14 @@ begin
   begin
     sleep(500);
     Button1Click(nil);
-    if (coroa4.Visible = false) then
-      coroa4.Visible := true
-    else if coroa5.Visible = false then
-      coroa5.Visible := true
-    else if coroa6.Visible = false then
+    if (coroa1.Visible = false) then
+      coroa1.Visible := True
+    else if coroa2.Visible = false then
+      coroa2.Visible := True
+    else if coroa3.Visible = false then
     begin
-      coroa6.Visible := true;
-      ShowMessage('Jogador 2 ganhou!');
+      coroa3.Visible := True;
+      ShowMessage('Jogador 1 ganhou!');
     end;
   end
   else if (tiro1.Visible and tiro2.Visible and tiro3.Visible) or
@@ -246,14 +200,14 @@ begin
     sleep(500);
 
     Button1Click(nil);
-    if (coroa1.Visible = false) then
-      coroa1.Visible := true
-    else if coroa2.Visible = false then
-      coroa2.Visible := true
-    else if coroa3.Visible = false then
+    if (coroa4.Visible = false) then
+      coroa4.Visible := True
+    else if coroa5.Visible = false then
+      coroa5.Visible := True
+    else if coroa6.Visible = false then
     begin
-      coroa3.Visible := true;
-      ShowMessage('Jogador 1 ganhou!');
+      coroa6.Visible := True;
+      ShowMessage('Jogador 2 ganhou!');
     end;
 
   end
@@ -273,7 +227,7 @@ end;
 
 procedure TForm1.FormShow(Sender: TObject);
 begin
-  iniciarJogo;
+iniciarJogo;
 end;
 
 procedure TForm1.iniciarJogo;
@@ -310,154 +264,6 @@ begin
   faca7.Visible := false;
   faca8.Visible := false;
   faca9.Visible := false;
-end;
-
-procedure TForm1.exibirCarta(carta: TImage);
-begin
-  carta.Visible := true;
-  carta.Repaint;
-  sleep(3000);
-  Application.ProcessMessages;
-  carta.Visible := false;
-end;
-
-procedure TForm1.trocarPosição;
-begin
-  if faca1.Visible = true then
-  begin
-    faca1.Visible := false;
-    tiro1.Visible := true;
-  end
-  else if tiro1.Visible = true then
-  begin
-    tiro1.Visible := false;
-    faca1.Visible := true;
-  end;
-  if faca2.Visible = true then
-  begin
-    faca2.Visible := false;
-    tiro2.Visible := true;
-  end
-  else if tiro2.Visible = true then
-  begin
-    tiro2.Visible := false;
-    faca2.Visible := true;
-  end;
-  if faca3.Visible = true then
-  begin
-    faca3.Visible := false;
-    tiro3.Visible := true;
-  end
-  else if tiro3.Visible = true then
-  begin
-    tiro3.Visible := false;
-    faca3.Visible := true;
-  end;
-  if faca4.Visible = true then
-  begin
-    faca4.Visible := false;
-    tiro4.Visible := true;
-  end
-  else if tiro4.Visible = true then
-  begin
-    tiro4.Visible := false;
-    faca4.Visible := true;
-  end;
-  if faca5.Visible = true then
-  begin
-    faca5.Visible := false;
-    tiro5.Visible := true;
-  end
-  else if tiro5.Visible = true then
-  begin
-    tiro5.Visible := false;
-    faca5.Visible := true;
-  end;
-  if faca6.Visible = true then
-  begin
-    faca6.Visible := false;
-    tiro6.Visible := true;
-  end
-  else if tiro6.Visible = true then
-  begin
-    tiro6.Visible := false;
-    faca6.Visible := true;
-  end;
-  if faca7.Visible = true then
-  begin
-    faca7.Visible := false;
-    tiro7.Visible := true;
-  end
-  else if tiro7.Visible = true then
-  begin
-    tiro7.Visible := false;
-    faca7.Visible := true;
-  end;
-  if faca8.Visible = true then
-  begin
-    faca8.Visible := false;
-    tiro8.Visible := true;
-  end
-  else if tiro8.Visible = true then
-  begin
-    tiro8.Visible := false;
-    faca8.Visible := true;
-  end;
-  if faca9.Visible = true then
-  begin
-    faca9.Visible := false;
-    tiro9.Visible := true;
-  end
-  else if tiro9.Visible = true then
-  begin
-    tiro9.Visible := false;
-    faca9.Visible := true;
-  end;
-end;
-
-procedure TForm1.pulaVez;
-begin
-  if GJogadorDaVez = 1 then
-  begin
-    GJogadorDaVez := 2;
-    textVez.Caption := 'Jogador 2';
-  end
-  else
-  begin
-    GJogadorDaVez := 1;
-    textVez.Caption := 'Jogador 1';
-  end;
-end;
-
-procedure TForm1.limpaCampo;
-begin
-  tiro1.Visible := false;
-  tiro2.Visible := false;
-  tiro3.Visible := false;
-  tiro4.Visible := false;
-  tiro5.Visible := false;
-  tiro6.Visible := false;
-  tiro7.Visible := false;
-  tiro8.Visible := false;
-  tiro9.Visible := false;
-  faca1.Visible := false;
-  faca2.Visible := false;
-  faca3.Visible := false;
-  faca4.Visible := false;
-  faca5.Visible := false;
-  faca6.Visible := false;
-  faca7.Visible := false;
-  faca8.Visible := false;
-  faca9.Visible := false;
-end;
-
-procedure TForm1.trocaColuna(img1, img2, img3: TImage);
-begin
-  var
-  aux := img1.Visible;
-  img1.Visible := img3.Visible;
-  img3.Visible := img2.Visible;
-  img2.Visible := aux;
 end;
 
 procedure TForm1.Panel1Click(Sender: TObject);
@@ -517,14 +323,14 @@ begin
 
   if GJogadorDaVez = 1 then
   begin
-    imagemTiro.Visible := true;
+    imagemTiro.Visible := True;
     imagemTiro.Repaint;
     inc(controladorJog1, 1);
     checarGanhador;
     textVez.Caption := 'Jogador 2';
     textVez.Repaint;
     GJogadorDaVez := 2;
-    if controladorJog1 > 2 then
+    if controladorJog1 >= 2 then
     begin
       sorteador := random(10);
       sorteioCarta;
@@ -533,7 +339,7 @@ begin
   end
   else
   begin
-    imagemFaca.Visible := true;
+    imagemFaca.Visible := True;
     imagemFaca.Repaint;
     inc(controladorJog2, 1);
     checarGanhador;
