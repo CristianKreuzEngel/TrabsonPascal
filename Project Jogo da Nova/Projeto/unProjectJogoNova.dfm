@@ -10,9 +10,7 @@ object Form1: TForm1
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Image1: TImage
     Left = 0
@@ -38021,7 +38019,7 @@ object Form1: TForm1
     Top = 185
     Width = 75
     Height = 25
-    Caption = 'Button1'
+    Caption = 'Recome'#231'ar'
     TabOrder = 9
     Visible = False
     OnClick = Button1Click

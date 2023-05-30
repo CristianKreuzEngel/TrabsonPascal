@@ -92,8 +92,6 @@ var
   sorteador: Integer;
   estahExecutando: boolean;
   aux: boolean;
-  contJg1: Integer;
-  contJg2: Integer;
 
 implementation
 
@@ -151,6 +149,7 @@ begin
         faca6.Visible := false;
         faca8.Visible := false;
 
+
       end;
     4:
       begin
@@ -165,13 +164,6 @@ begin
     6:
       begin
         exibirCarta(carta6);
-        tiro3.Visible := false;
-        tiro5.Visible := false;
-        tiro7.Visible := false;
-
-        faca3.Visible := false;
-        faca5.Visible := false;
-        faca7.Visible := false;
       end;
     7:
       begin
@@ -239,65 +231,20 @@ begin
   begin
     sleep(500);
     Button1Click(nil);
-    if (coroa4.Visible = false) and (contJg1 < 1) then
+    if (coroa4.Visible = false) then
     begin
       coroa4.Visible := true;
       caveira1.Visible := true;
-      inc(contJg2, 1);
     end
-    else if (coroa5.Visible = false) and (caveira5.Visible = false) then
+    else if coroa5.Visible = false then
     begin
       coroa5.Visible := true;
       caveira2.Visible := true;
-      inc(contJg2, 1);
     end
-    else if (coroa6.Visible = false) and (caveira6.Visible = false)  then
+    else if coroa6.Visible = false then
     begin
       coroa6.Visible := true;
-      caveira3.Visible := true;
-      inc(contJg2, 1);
-      if (contJg1 >= 2) and (contJg1 > contJg2) then
-      begin
-        ShowMessage('Jogador 1 wins!');
-        iniciarJogo;
-        contJg1 := 0;
-        contJg2 := 0;
-        caveira1.Visible := false;
-        caveira2.Visible := false;
-        caveira3.Visible := false;
-        caveira4.Visible := false;
-        caveira5.Visible := false;
-        caveira6.Visible := false;
-
-        coroa1.Visible := false;
-        coroa2.Visible := false;
-        coroa3.Visible := false;
-        coroa4.Visible := false;
-        coroa5.Visible := false;
-        coroa6.Visible := false;
-
-      end
-      else
-      begin
-        ShowMessage('Jogador 2 wins!');
-        iniciarJogo;
-        contJg1 := 0;
-        contJg2 := 0;
-        caveira1.Visible := false;
-        caveira2.Visible := false;
-        caveira3.Visible := false;
-        caveira4.Visible := false;
-        caveira5.Visible := false;
-        caveira6.Visible := false;
-
-        coroa1.Visible := false;
-        coroa2.Visible := false;
-        coroa3.Visible := false;
-        coroa4.Visible := false;
-        coroa5.Visible := false;
-        coroa6.Visible := false;
-      end;
-
+      ShowMessage('Jogador 2 ganhou!');
     end;
   end
   else if (tiro1.Visible and tiro2.Visible and tiro3.Visible) or
@@ -312,65 +259,16 @@ begin
     sleep(500);
 
     Button1Click(nil);
-    if (coroa1.Visible = false) and (contJg2 < 1) then
-    begin
-      coroa1.Visible := true;
-      caveira4.Visible := true;
-      inc(contJg1, 1);
-    end
-    else if (coroa2.Visible = false) and (caveira2.Visible = false) then
-    begin
-      coroa2.Visible := true;
-      caveira5.Visible := true;
-      inc(contJg1, 1);
-    end
-    else if (coroa3.Visible = false) then
+    if (coroa1.Visible = false) then
+      coroa1.Visible := true
+    else if coroa2.Visible = false then
+      coroa2.Visible := true
+    else if coroa3.Visible = false then
     begin
       coroa3.Visible := true;
-      caveira6.Visible := true;
-      inc(contJg1, 1);
-      if (contJg1 >= 2) and (contJg1 > contJg2) then
-      begin
-        ShowMessage('Jogador 1 wins!');
-        iniciarJogo;
-        contJg1 := 0;
-        contJg2 := 0;
-        caveira1.Visible := false;
-        caveira2.Visible := false;
-        caveira3.Visible := false;
-        caveira4.Visible := false;
-        caveira5.Visible := false;
-        caveira6.Visible := false;
-
-        coroa1.Visible := false;
-        coroa2.Visible := false;
-        coroa3.Visible := false;
-        coroa4.Visible := false;
-        coroa5.Visible := false;
-        coroa6.Visible := false;
-
-      end
-      else
-      begin
-        ShowMessage('Jogador 2 wins!');
-        iniciarJogo;
-        contJg1 := 0;
-        contJg2 := 0;
-        caveira1.Visible := false;
-        caveira2.Visible := false;
-        caveira3.Visible := false;
-        caveira4.Visible := false;
-        caveira5.Visible := false;
-        caveira6.Visible := false;
-
-        coroa1.Visible := false;
-        coroa2.Visible := false;
-        coroa3.Visible := false;
-        coroa4.Visible := false;
-        coroa5.Visible := false;
-        coroa6.Visible := false;
-      end;
+      ShowMessage('Jogador 1 ganhou!');
     end;
+
   end
   else if (faca1.Visible or tiro1.Visible) And (faca2.Visible or tiro2.Visible)
     and (faca3.Visible or tiro3.Visible) and (faca4.Visible or tiro4.Visible)
@@ -380,6 +278,7 @@ begin
   begin
     ShowMessage('Deu Nova!');
     sleep(500);
+
     Button1Click(nil);
   end;
 
@@ -388,8 +287,6 @@ end;
 procedure TForm1.FormShow(Sender: TObject);
 begin
   iniciarJogo;
-  contJg1 := 0;
-  contJg2 := 0;
 end;
 
 procedure TForm1.iniciarJogo;
